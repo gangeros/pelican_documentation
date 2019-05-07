@@ -1,4 +1,9 @@
 # Краткое руководство пользователя
+взять за основку 
+https://github.com/CopterExpress/pelican-docs/blob/master/cameras.md
+FAQ содрать отсюда
+https://pilothub.ru/news/mavic-air-user-guide
+
 ### ПЕРЕД ПЕРВЫМ ЗАПУСКОМ
 ### ДРОН (описание) (картинка пульта)
 ###ПУЛЬТ УПРАВЛЕНИЯ (описание пульта)(картинка пульта)

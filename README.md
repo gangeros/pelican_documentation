@@ -3,7 +3,7 @@
 https://github.com/CopterExpress/pelican-docs/blob/master/cameras.md
 FAQ содрать отсюда
 https://pilothub.ru/news/mavic-air-user-guide
-
+ТАК ЖЕ оформлять единым стилем с COEX
 ### ПЕРЕД ПЕРВЫМ ЗАПУСКОМ
 ### ДРОН (описание) (картинка пульта)
 ###ПУЛЬТ УПРАВЛЕНИЯ (описание пульта)(картинка пульта)

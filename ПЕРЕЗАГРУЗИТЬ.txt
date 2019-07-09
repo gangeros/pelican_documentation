@@ -1,0 +1,34 @@
+ПЕРЕЗАГРУЗИТЬ 
+sudo systemctl restart clever
+
+нумерация полей маркеров с лева-верхнего угла 
+	--top-left
+ 
+генерация карты арукометок 
+	rosrun aruco_pose genmap.py 0.33 2 4 1 1 0 > ~/catkin_ws/src/clever/aruco_pose/map/test_map.txt
+
+	после этого необходимо в aruco.launch поменять файл карты меток
+
+
+быстро вернуться в корень 
+	cd
+
+подняться на один уровень папки вверх
+	cd ..
+
+создать файл с нуля 
+	nano (имя файла.[расширение])
+	пример: 
+		nano file.py
+
+самый лучший способ выключить распберии
+	sudo shutdown now
+
+
+в полетнике для автономки 
+	local position estimator
+		LPE_FUSIO
+			отключаем лишнее
+				
+
+frame_id ="body" ориентация относительно судна. 				

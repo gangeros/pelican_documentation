@@ -77,10 +77,13 @@
 ![Альтернативный текст](/img/COEX_PULT_technoPol_2.png)
 Пульт COEX используется для управления и настройки квадрокоптером.
 
--SA – переключение полетных режимов
-  -sa↑ - stabilize mode
-  -sa- - Altitude mode
-  -sa↓ - Position mode
+- SA – переключение полетных режимов
+
+  sa↑ - stabilize mode
+
+  sa- - Altitude mode
+
+  sa↓ - Position mode
 
 
 ### Подготовка пульта

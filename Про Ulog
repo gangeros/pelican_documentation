@@ -1,0 +1,17 @@
+Про Ulog
+http://dev.px4.io/v1.9.0/en/log/ulog_file_format.html
+
+Софты для анализа журналов, все на JAVA и под ubuntu
+https://docs.px4.io/v1.9.0/en/log/flight_log_analysis.html
+
+Объяснение логов
+https://docs.px4.io/v1.9.0/en/log/flight_review.html
+
+мануал-тюнинг пидов
+https://en.wikipedia.org/wiki/PID_controller#Manual_tuning
+
+математика полета px4
+https://dev.px4.io/v1.9.0/en/flight_stack/controller_diagrams.html
+нотация
+https://dev.px4.io/v1.9.0/en/contribute/notation.html
+

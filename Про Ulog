@@ -15,3 +15,9 @@ https://dev.px4.io/v1.9.0/en/flight_stack/controller_diagrams.html
 нотация
 https://dev.px4.io/v1.9.0/en/contribute/notation.html
 
+------------------------------------------------------------------
+ИССЛЕДОВАНИЕ MAVLINK-команд
+	top [arguments...]
+   once          print load only once
+   Мониторинг запущенных процессов и их CPU, использования стека, приоритета и состояния
+   

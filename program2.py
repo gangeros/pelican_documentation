@@ -1,0 +1,48 @@
+import rospy
+from clever import srv
+from std_srvs.srv import Trigger
+from mavros_msgs.srv import CommandBool
+
+rospy.init_node('flight')
+
+get_telemetry = rospy.ServiceProxy('get_telemetry', srv.GetTelemetry)
+navigate = rospy.ServiceProxy('navigate', srv.Navigate)
+navigate_global = rospy.ServiceProxy('navigate_global', srv.NavigateGlobal)
+set_position = rospy.ServiceProxy('set_position', srv.SetPosition)
+set_velocity = rospy.ServiceProxy('set_velocity', srv.SetVelocity)
+set_attitude = rospy.ServiceProxy('set_attitude', srv.SetAttitude)
+set_rates = rospy.ServiceProxy('set_rates', srv.SetRates)
+land = rospy.ServiceProxy('land', Trigger)
+arming = rospy.ServiceProxy('mavros/cmd/arming', CommandBool)
+
+navigate(x=0, y=0, z=1.5, speed=0.5, frame_id='body', auto_arm=True)
+rospy.sleep(3)
+navigate(x=1, y=2, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(6)
+navigate(x=1, y=5, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(5)
+navigate(x=1, y=3.5, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(5)
+navigate(x=2, y=3.5, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(3)
+navigate(yaw=math.radians(-90), frame_id='body')
+rospy.sleep(3)
+navigate(x=2, y=5, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(3)
+navigate(yaw=math.radians(90), frame_id='body')
+rospy.sleep(3)
+navigate(x=3, y=5, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(3)
+navigate(yaw=math.radians(90), frame_id='body')
+rospy.sleep(3)
+navigate(x=3, y=2, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(4)
+navigate(yaw=math.radians(90), frame_id='body')
+rospy.sleep(3)
+navigate(x=2, y=2, z=1.5, speed=0.7, frame_id='aruco_map')
+rospy.sleep(3)
+navigate(yaw=math.radians(90), frame_id='body')
+rospy.sleep(3)
+navigate(x=2, y=3.5, z=1.5, speed=0.7, frame_id='aruco_map')
+land()
+arming(False)  # дизарм

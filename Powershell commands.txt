@@ -1,0 +1,80 @@
+Get-command
+Get-command -ListImported
+Get-command -Type Cmdlet | Sort-Object -Propierty Noun | Format-table -GroupBy Noun
+get-command -Module Microsoft.PowerShell.Security, PSScheduledJob
+Get-command Get-AppLockerPolicy
+Get-command get-childitem -Args Cert: -Syntax
+Get-command *
+Get-command -ParametrName *Auth* -ParameterType AuthenticationMechanism
+Get-command dir
+Get-command notepad -all | Format-Table CommandType, Name, Definition
+(Get-command Get-date).ModuleName Microsoft.Powershell.Utility
+Get-command -ParameterType (((Get-NetAdapter)[0]).PSTypeNames)
+----------------------------------------------------------------
+GET-CONTENT -взять инфу
+GET-LOCATION -взять путь
+------------------------
+get-variable - список переменных
+Select-Object - создать пользовательские объекты windows со свойствами, выбранными из объектов, которые пользуются для их создания.
+Sort-OBJECT
+Get-ChildItem |
+  Sort-Object -Property LastWriteTime, Name |
+  Format-Table -Property LastWriteTime, Name
+  [System.Math]::Sqrt(256)
+
+
+Get-WmiObject -List |Format-List -Property  name
+получить список всех wmi классов
+
+Get-WmiObject -Class Win32_OperatingSystem | Select-Object -Property *
+получить свойства класса на примере win32_operatingsystem
+
+Удобно назначать класс к переменной и получать свойства через точку. (пример: $result.Caption )
+
+Get-Credential
+Удаленный доступ? (RDP?)
+
+Get-WinEvent -FilterHashtable @{
+   LogName='Application'
+   ProviderName='*defrag'
+}
+хэштаблицы для быстрого вывода инфы в логах винды
+
+
+New-PSDrive -name jetid -PSProvider FileSystem -Root "C:\Users\Администратор\Desktop\powershell"
+
+создать диск powershell
+
+
+Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true -ComputerName . | Format-Table -Property IPAddress
+Получить список ip-адресов, которые использует комьютер
+
+Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true -ComputerName .
+Подробные данные по адаптеру
+
+Get-WmiObject -Class Win32_PingStatus -Filter "Address='127.0.0.1'" -ComputerName .
+
+Альтернативный пинг
+
+1..254| ForEach-Object -Process {Get-WmiObject -Class Win32_PingStatus -Filter ("Address='192.168.1." + $_ + "'") -ComputerName .} | Select-Object -Property Address,ResponseTime,StatusCode
+Пингануть всех в подсети
+
+
+(New-Object -ComObject WScript.Network).MapNetworkDrive('B:', '\\FPS01\users')
+создание сетевого диска
+
+@(Get-ChildItem).count
+Подсчитать колличество объектов
+
+Get-Process | Out-File -FilePath C:\temp\processlist.txt
+вывод в файл
+
+Get-Command Get-Command | Out-Printer -Name 'Microsoft Office Document Image Writer'
+вывод в принтер
+
+киров вятка забронировать номер 
+26 ранний заед
+28 поздний выезд
+вариант комфорт
+https://www.vyatkahotel.ru/
+#339955;
